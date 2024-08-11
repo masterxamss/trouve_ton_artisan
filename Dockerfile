@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /cv-react-repo
 
-EXPOSE 517
+EXPOSE 5173
 
 COPY package.json package-lock.json ./
 
