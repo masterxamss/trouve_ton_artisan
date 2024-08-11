@@ -1,13 +1,20 @@
-FROM node:18-alpine
+# Use the official Node.js image as the base image
+FROM node:18
 
-WORKDIR /cv-react-repo
+# Set the working directory in the container
+WORKDIR /trouve_ton_artisan
 
-EXPOSE 5173
+# Copy the application files into the working directory
+COPY . /trouve_ton_artisan
 
-COPY package.json package-lock.json ./
+# Install the application dependencies
+RUN npm install
 
-RUN npm install --silent
+# Build the React application
+RUN npm run build
 
-COPY . ./
+# Expose port 3000
+EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+# Define the entry point for the container
+CMD ["npm", "start"]
