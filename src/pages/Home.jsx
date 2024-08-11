@@ -1,6 +1,13 @@
+import HeroBanner from "../components/HeroBanner"
+import Classification from "../components/Classification"
+import SectionFindWorker from "../components/SectionFindWorker"
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+      <HeroBanner />
+      <SectionFindWorker />
+      <Classification />
+    </main>
   )
 }
 
