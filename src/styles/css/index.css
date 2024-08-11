@@ -1,4 +1,227 @@
-h1 {
-  color: red;
-  font-size: 20px;
+@import url("https://fonts.cdnfonts.com/css/graphik-trial");
+@import url("https://fonts.cdnfonts.com/css/graphik-trial");
+.header-nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7.125rem;
+  padding: 0 4rem;
+  background-color: #FFFFFF;
+}
+.header-nav__container .logo {
+  height: 200px;
+}
+.header-nav__container div {
+  display: flex;
+  align-items: center;
+}
+.header-nav__container nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav__container nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+.header-nav__container nav a {
+  margin: 0 2rem;
+  text-decoration: none;
+  color: #00487C;
+}
+.header-nav__container nav a:hover {
+  text-decoration: underline;
+  color: #00487C;
+}
+.header-nav__container .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0074C7;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-nav__container {
+    padding: 0 1rem;
+  }
+  .header-nav__container .logo {
+    height: 150px;
+  }
+  .header-nav__container .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  .header-nav__container nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #0074C7;
+    transform: translateY(-100vh);
+  }
+  .header-nav__container nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #0074C7;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .header-nav__container nav ul li {
+    background-color: #0074C7;
+  }
+  .header-nav__container nav ul li a {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+  }
+  .header-nav__container nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  .header-nav__container .responsive_nav {
+    transform: none;
+  }
+  .header-nav__container .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: #FFFFFF;
+  }
+}
+* {
+  font-family: "Graphik Trial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 3.125rem;
+}
+
+.field-name {
+  width: 32rem;
+  height: 3.125rem;
+  border: 1px solid #0074C7;
+  border-top: none;
+  border-left: none;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+.field-name:focus, .field-name:hover {
+  outline: 3px solid #ffd000;
+}
+
+.items {
+  background-color: #0074C7;
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 2rem 0;
+  margin-top: 0.3rem;
+  border-radius: 20px;
+}
+.items p {
+  padding-left: 2rem;
+}
+.items p:hover, .items p:focus {
+  background-color: #F1F8FC;
+  color: #0074C7;
+  cursor: pointer;
+  outline: none;
+  border-inline: 3px solid #ffd000;
+  writing-mode: horizontal-tb;
+}
+
+.search-items {
+  width: 22rem;
+  height: 3.125rem;
+  height: fit-content;
+  font-size: 1.5rem;
+}
+
+.items-placeholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  border: 1px solid #0074C7;
+  border-top: none;
+  border-left: none;
+  background-color: #FFFFFF;
+  padding: 0 1rem;
+  color: gray;
+}
+.items-placeholder:focus, .items-placeholder:hover {
+  outline: 3px solid #ffd000;
+}
+.items-placeholder .chevron-down {
+  color: #0074C7;
+}
+.items-placeholder p {
+  margin: 0;
+}
+
+.searchButton {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  height: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  color: #0074C7;
+}
+.searchButton:hover {
+  border-radius: 50%;
+  background-color: #0074C7;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 430px) {
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+  .searchBar input {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .searchBar .search-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    font-size: 1rem;
+  }
+  .searchBar .items-placeholder {
+    width: 90%;
+  }
+  .searchBar .items {
+    width: 90%;
+  }
+}
+* {
+  font-family: "Graphik Trial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

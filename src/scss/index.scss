@@ -1,4 +1,7 @@
-h1{
-    color: red;
-    font-size: 20px;
-}
+//COMPONENTS
+@import 'components/header';
+@import 'components/searchBar';
+@import 'base';
+
+
+
