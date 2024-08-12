@@ -111,6 +111,7 @@
 }
 
 .searchBar {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -126,9 +127,13 @@
   border-left: none;
   padding-left: 1rem;
   font-size: 1.2rem;
+  color: #0074C7;
 }
 .field-name:focus, .field-name:hover {
   outline: 3px solid #ffd000;
+}
+.field-name::placeholder {
+  color: #0074C7;
 }
 
 .items {
@@ -166,7 +171,7 @@
   border-left: none;
   background-color: #FFFFFF;
   padding: 0 1rem;
-  color: gray;
+  color: #0074C7;
 }
 .items-placeholder:focus, .items-placeholder:hover {
   outline: 3px solid #ffd000;
@@ -223,6 +228,84 @@
   }
   .searchBar .items {
     width: 90%;
+  }
+}
+.hero-container {
+  height: 35.5rem;
+  margin-top: 2rem;
+  background-image: url("../../assets/images/hero-banner.webp");
+  background-size: contain;
+}
+.hero-container .fill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-container .fill h1 {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.hero-container .fill .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.hero-container .fill .links .btnSpecialty {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #0074C7;
+  padding: 0.5rem 4rem;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.hero-container .fill .links .btnSpecialty:hover, .hero-container .fill .links .btnSpecialty:focus {
+  background-color: #00487C;
+  outline: 2px solid #ffd000;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-container {
+    height: 25.5rem;
+  }
+  .hero-container .fill h1 {
+    font-size: 2.5rem;
+  }
+  .hero-container .fill .links {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .hero-container .fill .links .btnSpecialty {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 4rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .hero-container {
+    height: 20rem;
+  }
+  .hero-container .fill h1 {
+    font-size: 1.5rem;
+  }
+  .hero-container .fill .links {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .hero-container .fill .links .btnSpecialty {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
   }
 }
 * {

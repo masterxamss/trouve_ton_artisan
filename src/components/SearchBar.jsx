@@ -13,7 +13,7 @@ const SearchBar = () => {
 
   const specialtyRef = useRef();
   const locationRef = useRef();
-  const navigate = useNavigate(); // Hook para navegar
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -89,7 +89,7 @@ const SearchBar = () => {
   };
 
   const handleSearch = () => {
-    // Navegar para ListWorkers e enviar o estado
+    // Navigate to ListWorkers and send the status
     navigate("/list_workers", {
       state: {
         name: name,
@@ -128,7 +128,9 @@ const SearchBar = () => {
                 value={specialty.specialty}
                 tabIndex="0"
                 onClick={handleSpecialtySelect}
-                onKeyDown={(event) => handleItemKeyDown(event, handleSpecialtySelect)}
+                onKeyDown={(event) =>
+                  handleItemKeyDown(event, handleSpecialtySelect)
+                }
               >
                 {specialty.specialty}
               </p>
@@ -156,7 +158,9 @@ const SearchBar = () => {
                 value={location.location}
                 tabIndex="0"
                 onClick={handleLocationSelect}
-                onKeyDown={(event) => handleItemKeyDown(event, handleLocationSelect)}
+                onKeyDown={(event) =>
+                  handleItemKeyDown(event, handleLocationSelect)
+                }
               >
                 {location.location}
               </p>
@@ -173,5 +177,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-
-
