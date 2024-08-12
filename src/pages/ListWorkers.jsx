@@ -13,7 +13,7 @@ const ListWorkers = () => {
       try {
         const data = await getData();
 
-        // Filtrando os dados com base nos parâmetros recebidos
+        // Filtering the data based on the parameters received
         const filtered = data.filter((item) => {
           return (
             (!name || item.name.toLowerCase().includes(name.toLowerCase())) &&
