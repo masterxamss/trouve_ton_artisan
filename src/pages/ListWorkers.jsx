@@ -1,43 +1,42 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getData } from "../services/dataService";
+import { fetchFilteredData } from "../services/dataService";
+import { FaTriangleExclamation } from "react-icons/fa6";
 
 const ListWorkers = () => {
   const location = useLocation();
   const { name, specialty, location: locationParam } = location.state || {};
 
   const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const loadFilteredData = async () => {
+      setLoading(true);
       try {
-        const data = await getData();
-
-        // Filtering the data based on the parameters received
-        const filtered = data.filter((item) => {
-          return (
-            (!name || item.name.toLowerCase().includes(name.toLowerCase())) &&
-            (!specialty || item.specialty === specialty) &&
-            (!locationParam || item.location === locationParam)
-          );
-        });
-
+        const filtered = await fetchFilteredData(name, specialty, locationParam);
         setFilteredData(filtered);
-      } catch (error) {
-        console.error("Error fetching or filtering data:", error);
+      } catch {
+        setError("There was an issue fetching the workers' data.");
+      } finally {
+        setLoading(false);
       }
     };
-
-    fetchData();
+    loadFilteredData();
   }, [name, specialty, locationParam]);
 
   return (
     <div>
       <h1>List of Workers</h1>
-      {filteredData.length > 0 ? (
+      {loading ? (
+        <p>Chargement...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : filteredData.length > 0 ? (
         <ul>
-          {filteredData.map((worker, index) => (
-            <li key={index}>
+          {filteredData.map((worker) => (
+            <li key={worker.id}>
               <p>Name: {worker.name}</p>
               <p>Specialty: {worker.specialty}</p>
               <p>Location: {worker.location}</p>
@@ -45,11 +44,15 @@ const ListWorkers = () => {
           ))}
         </ul>
       ) : (
-        <p>No workers found matching your criteria.</p>
+        <p className="error-message">
+          <FaTriangleExclamation /> 
+          Aucun travailleur ne correspond à vos critères.
+        </p>
       )}
     </div>
   );
 };
 
 export default ListWorkers;
+
 

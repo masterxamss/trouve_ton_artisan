@@ -2,18 +2,16 @@
 @import "../variables";
 
 .searchBar {
-  position: relative;
   display: flex;
   justify-content: center;
-  //align-items: center;
   gap: 1.5rem;
-  height: 3.125rem;
+  height: 2rem;
   padding: 0 1rem;
 }
 
 .field-name {
   width: 26rem;
-  height: 2.5rem;
+  height: 2rem;
   border: 1px solid $primary-color;
   border-top: none;
   border-left: none;
@@ -23,22 +21,21 @@
 
   &:focus,
   &:hover {
-    outline: 3px solid $outline-color;
+    outline: 2px solid $outline-color;
   }
   &::placeholder{
-    color: $primary-color;
+    color:$primary-color;
   }
 }
 
 .items {
-  //display:none;
   background-color: $primary-color;
   color: $white-color;
   font-weight: 500;
   padding: 2rem 0;
   margin-top: 0.3rem;
   border-radius: 20px;
-
+  //cursor: pointer;
   p {
     padding-left: 2rem;
 
@@ -48,7 +45,7 @@
       color: $primary-color;
       cursor: pointer;
       outline: none;
-      border-inline: 3px solid $outline-color;
+      border-inline: 2px solid $outline-color;
       writing-mode: horizontal-tb;
     }
   }
@@ -56,8 +53,6 @@
 
 .search-items {
   width: 22rem;
-  //height: 3.125rem;;
-  //height: fit-content;
   font-size: $font-size-1;
 }
 
@@ -65,7 +60,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
+  height: 2rem;
   border: 1px solid $primary-color;
   border-top: none;
   border-left: none;
@@ -75,7 +70,8 @@
 
   &:focus,
   &:hover {
-    outline: 3px solid $outline-color;
+    outline: 2px solid $outline-color;
+    cursor: pointer;
   }
 
   .chevron-down {
@@ -87,12 +83,13 @@
   }
 }
 
-.searchButton {
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8rem;
-  width: 50px;
-  height: 50px;
-  // padding: 0 .5rem;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   background-color: $white-color;
   border: none;
   color: $primary-color;
@@ -103,15 +100,28 @@
     color: $white-color;
     outline: 2px solid $outline-color;
   }
+
+  .search-icon{
+    font-size: 1.5rem;
+    
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .searchBar {
     padding: 0 1rem;
+
+    .items{
+      padding: 1rem 0;
+
+      p{
+        margin-bottom: .5rem;
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 540px) {
   .searchBar {
     display: flex;
     flex-direction: column;

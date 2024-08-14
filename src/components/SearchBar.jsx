@@ -169,8 +169,8 @@ const SearchBar = () => {
         )}
       </div>
 
-      <button className="searchButton" onClick={handleSearch}>
-        <FaSearch className="searchIcon" />
+      <button className="search-button" onClick={handleSearch}>
+        <FaSearch className="search-icon" />
       </button>
     </div>
   );
