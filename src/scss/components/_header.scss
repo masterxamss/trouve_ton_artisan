@@ -1,4 +1,7 @@
 @import "../variables";
+header{
+  position: relative;
+}
 .header-nav__container {
   display: flex;
   align-items: center;
@@ -119,11 +122,3 @@
   }
 }
 
-@media only screen and (max-width: 430px) {
-  // header{
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-}

@@ -7,3 +7,35 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    min-width: 321px;
+}
+
+.section-title {
+    font-size: $fs-desktop-h2;
+    font-weight: bold;
+    width: 100%;
+    color: $tertiary-color;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+
+  .error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:.5rem;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 1px solid $red-color;
+    font-size: $font-size-3;
+    text-align: center;
+    background-color: $secondary-color;
+    color: $red-color;
+  }

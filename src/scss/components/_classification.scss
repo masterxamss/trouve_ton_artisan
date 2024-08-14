@@ -1,0 +1,124 @@
+@import "variables";
+@import "../base";
+
+.section-classification {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  .classification-title {
+    display: flex;
+    align-items: center;
+    border-left: 5px solid $green-color;
+    width: 80%;
+
+    img{
+      width: 100px;
+    }
+  }
+
+  .row {
+    width: 80%;
+
+    .col-sm {
+        height: 100%;
+      color: white;
+      font-size: $font-size-3;
+      padding: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border: 1px solid $primary-color;
+
+      .classification-img {
+        padding: 2rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: $white-color;
+
+        img {
+          width: 60%;
+        }
+      }
+
+      .classification-details {
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        background: radial-gradient(
+          circle,
+          rgba(0, 116, 199, 1) 0%,
+          rgba(0, 72, 124, 1) 100%
+        );
+        ul {
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          li {
+            list-style: none;
+            margin-top: 1.5rem;
+
+            strong {
+              color: $green-color;
+              margin-right: 0.5rem;
+            }
+          }
+
+          .stars {
+            color: rgb(250, 195, 43);
+            display: flex;
+            align-items: center;
+
+            .note {
+              display: flex;
+              padding-top: 0.2rem;
+              margin-left: 0.5rem;
+              margin-bottom: 0;
+              color: $white-color;
+            }
+          }
+        }
+
+        .classification-btn {
+          border: none;
+          padding: 0.3rem 1.5rem;
+          border-radius: 25px;
+          margin-bottom: 1.5rem;
+          color: $tertiary-color;
+          background-color: $secondary-color;
+          font-weight: 500;
+          &:hover, &:focus {
+            outline: 2px solid $outline-color;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .classification-title{
+        height: fit-content;
+        margin-top: 2rem;
+        .section-title{
+            font-size: $fs-tablet-h2;
+        }
+    }
+
+    .classification-details{
+        font-size: $font-size-2;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .classification-details{
+        font-size: $font-size-1;
+    }}

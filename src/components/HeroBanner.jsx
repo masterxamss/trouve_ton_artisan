@@ -34,6 +34,7 @@ const HeroBanner = () => {
               value='Plombier'
               className="btnSpecialty"
               onMouseEnter={handleSpecialtyName}
+              onTouchStart={handleSpecialtyName}
               onClick={handleSpecialty}
               onKeyDown={handleItemKeyDown}
             >
@@ -43,6 +44,7 @@ const HeroBanner = () => {
               value='Couturier'
               className="btnSpecialty"
               onMouseEnter={handleSpecialtyName}
+              onTouchStart={handleSpecialtyName}
               onClick={handleSpecialty}
               onKeyDown={handleItemKeyDown}
             >
@@ -52,6 +54,7 @@ const HeroBanner = () => {
               value='Coiffeur'
               className="btnSpecialty"
               onMouseEnter={handleSpecialtyName}
+              onTouchStart={handleSpecialtyName}
               onClick={handleSpecialty}
               onKeyDown={handleItemKeyDown}
             >
@@ -61,6 +64,7 @@ const HeroBanner = () => {
               value='Chocolatier'
               className="btnSpecialty"
               onMouseEnter={handleSpecialtyName}
+              onTouchStart={handleSpecialtyName}
               onClick={handleSpecialty}
               onKeyDown={handleItemKeyDown}
             >
@@ -70,6 +74,7 @@ const HeroBanner = () => {
               value='Bijoutier'
               className="btnSpecialty"
               onMouseEnter={handleSpecialtyName}
+              onTouchStart={handleSpecialtyName}
               onClick={handleSpecialty}
               onKeyDown={handleItemKeyDown}
             >
