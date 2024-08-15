@@ -1,6 +1,9 @@
+import UnderConstruction from "../components/UnderConstruction";
 const Cookies = () => {
   return (
-    <div>Cookies</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 

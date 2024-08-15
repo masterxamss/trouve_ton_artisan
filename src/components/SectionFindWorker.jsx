@@ -27,9 +27,7 @@ const SectionFindWorker = () => {
           </p>
         </div>
 
-        <div className="article-img block-3">
-          {/* <img src="/src/assets/images/girl-laptop.webp" alt="Fille avec un ordinateur portable" className="article-img"/> */}
-        </div>
+        <div className="article-img block-3"></div>
 
         <div className="article-header block-4">
           <span className="article-number">2</span>
@@ -50,9 +48,7 @@ const SectionFindWorker = () => {
           </p>
         </div>
 
-        <div className="article-img block-6">
-          {/* <img src="/src/assets/images/worker.webp" alt="Fille avec un ordinateur portable" className="article-img"/> */}
-        </div>
+        <div className="article-img block-6"></div>
 
         <div className="article-header block-7">
           <span className="article-number">3</span>
@@ -72,9 +68,7 @@ const SectionFindWorker = () => {
           </p>
         </div>
 
-        <div className="article-img block-9">
-          {/* <img src="/src/assets/images/women-phone.webp" alt="Fille avec un ordinateur portable" className="article-img"/> */}
-        </div>
+        <div className="article-img block-9"></div>
 
         <div className="article-header block-10">
           <span className="article-number">4</span>
@@ -93,9 +87,7 @@ const SectionFindWorker = () => {
           </p>
         </div>
 
-        <div className="article-img block-12">
-          {/* <img src="/src/assets/images/women-phone.webp" alt="Fille avec un ordinateur portable" className="article-img"/> */}
-        </div>
+        <div className="article-img block-12"></div>
       </article>
     </section>
   );

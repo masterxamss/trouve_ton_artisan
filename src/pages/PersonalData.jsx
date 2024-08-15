@@ -1,6 +1,9 @@
+import UnderConstruction from "../components/UnderConstruction";
 const PersonalData = () => {
   return (
-    <div>PersonalData</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 

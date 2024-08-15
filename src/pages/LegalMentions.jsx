@@ -1,6 +1,9 @@
+import UnderConstruction from "../components/UnderConstruction";
 const LegalMentions = () => {
   return (
-    <div>LegalMentions</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 
