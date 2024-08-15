@@ -1,6 +1,10 @@
+import UnderConstruction from "../components/UnderConstruction";
+
 const Accessibility = () => {
   return (
-    <div>Accessibility</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 

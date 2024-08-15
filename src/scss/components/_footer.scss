@@ -1,0 +1,18 @@
+@import '../variables';
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+
+    .container{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: 95%;
+    }
+}
