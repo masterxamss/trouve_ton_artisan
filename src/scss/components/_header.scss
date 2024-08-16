@@ -57,8 +57,10 @@ header {
   .header-nav__container {
     padding: 0 1rem;
 
-    .logo {
-      height: 150px;
+    .logo-link{
+      .logo {
+        height: 150px;
+      }
     }
 
     .nav-btn {

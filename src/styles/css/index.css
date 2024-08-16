@@ -52,7 +52,7 @@ header {
   .header-nav__container {
     padding: 0 1rem;
   }
-  .header-nav__container .logo {
+  .header-nav__container .logo-link .logo {
     height: 150px;
   }
   .header-nav__container .nav-btn {
@@ -101,7 +101,7 @@ header {
 }
 
 body {
-  min-width: 430px;
+  min-width: 360px;
 }
 
 .section-title {
@@ -347,7 +347,7 @@ body {
 }
 
 body {
-  min-width: 430px;
+  min-width: 360px;
 }
 
 .section-title {
@@ -651,7 +651,7 @@ body {
 }
 
 body {
-  min-width: 430px;
+  min-width: 360px;
 }
 
 .section-title {
@@ -964,7 +964,7 @@ footer .container {
 }
 
 body {
-  min-width: 430px;
+  min-width: 360px;
 }
 
 .section-title {
