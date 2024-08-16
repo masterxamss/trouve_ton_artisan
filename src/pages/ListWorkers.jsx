@@ -52,7 +52,7 @@ const ListWorkers = () => {
         {loading ? (
           <p>Chargement...</p>
         ) : error ? (
-          <p>{error}</p>
+          <p className="error-message">{error}</p>
         ) : filteredData.length > 0 ? (
           <>
             {filteredData.map((worker) => (

@@ -12,6 +12,7 @@ const BreadCumbs = (props) => {
         <Link to="/">{props.home}</Link>
         <span> / </span>
         <Link to="/list_workers">{props.listWorkers}</Link>
+        <span> / </span>
         <Link to="/worker_file">{props.workerFile}</Link>
       </div>
       <div className="printer-email">

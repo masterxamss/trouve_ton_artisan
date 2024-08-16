@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import { printStars } from "../services/utilities";
 
 const CardWorker = ({ name, note, specialty, location }) => {
+
+  const navigate = useNavigate();
+  const handleCategory = () => {
+    navigate("/worker_file", {
+      state: {
+        name: name,
+      },
+    });
+  };
 
   return (
     <div className="card-worker" tabIndex={0}>
@@ -22,7 +30,7 @@ const CardWorker = ({ name, note, specialty, location }) => {
           <strong>Ville :</strong> {location}
         </li>
       </ul>
-      <Link to="/worker_file">Voir cet artisan</Link>
+      <button className="cardWorker-btn" onClick={handleCategory}>Voir cet artisan</button>
     </div>
   );
 };

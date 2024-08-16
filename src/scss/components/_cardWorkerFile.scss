@@ -1,0 +1,11 @@
+@import '../variables';
+
+.worker-infos{
+    img{
+        width:200px;
+    }
+
+    display:flex;
+    background-color: $secondary-color;
+    width: 80%;
+}
