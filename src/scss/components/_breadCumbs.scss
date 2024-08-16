@@ -1,0 +1,63 @@
+@import "../variables";
+
+.bread-cumbs {
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .links {
+    a {
+      text-decoration: none;
+      color: $bread-cumbs-color;
+
+      &:hover {
+        text-decoration: underline;
+        color: $tertiary-color;
+      }
+    }
+
+    span {
+      color: $bread-cumbs-color;
+      margin: 0 0.5rem;
+    }
+  }
+
+  .printer-email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $tertiary-color;
+
+    .bread-cumbs-icon {
+      margin-left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        color: $red-color;
+        cursor: pointer;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .printer-email {
+    .bread-cumbs-icon {
+      p {
+        display: none;
+      }
+    }
+  }
+}

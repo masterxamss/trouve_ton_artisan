@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { printStars } from "../services/utilities";
 import { fetchTopData } from "../services/dataService";
-import { FaStar, FaStarHalf } from "react-icons/fa";
 import { FaTriangleExclamation } from "react-icons/fa6";
 const Classification = () => {
   const top = true;
@@ -28,7 +28,10 @@ const Classification = () => {
     <section className="section-classification">
       <div className="classification-title">
         <h2 className="section-title">Artisan du mois</h2>
-        <img src="/src/assets/images/icons/artisan-calssification.png" alt="artisan classification" />
+        <img
+          src="/src/assets/images/icons/artisan-calssification.png"
+          alt="artisan classification"
+        />
       </div>
 
       {loading ? (
@@ -52,27 +55,10 @@ const Classification = () => {
                     <strong>Nom: </strong>
                     {worker.name}
                   </li>
-                  {worker.note === "4.8" || worker.note === "4.9" ? (
-                    <li className="stars">
-                      <strong>Note: </strong>
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStarHalf />
-                      <p className="note">{worker.note + "/5"}</p>
-                    </li>
-                  ) : (
-                    <li className="stars">
-                      <strong>Note: </strong>
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <p className="note">{worker.note + "/5"}</p>
-                    </li>
-                  )}
+                  <li>
+                    <strong>Note: </strong>
+                    {printStars(worker.note)} {worker.note} / 5
+                  </li>
                   <li>
                     <strong>Métier: </strong>
                     {worker.specialty}
@@ -92,7 +78,7 @@ const Classification = () => {
         </div>
       ) : (
         <p className="error-message" tabIndex={0}>
-          <FaTriangleExclamation /> 
+          <FaTriangleExclamation />
           Aucun artisan avec une note supérieure à 4,8
         </p>
       )}

@@ -1,0 +1,51 @@
+@import "variables";
+.card-worker {
+  position: relative;
+  width: calc(33.33% - 1rem);
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  background-color: $secondary-color;
+  min-width: 360px;
+
+  ul {
+    padding: 2rem;
+    color: $primary-color;
+
+    li {
+      margin-top: 1rem;
+      strong {
+        color: $tertiary-color;
+      }
+
+      &::marker {
+        color: $tertiary-color;
+      }
+    }
+  }
+  img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 100px;
+  }
+
+  a {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+    font-weight: 500;
+    width: fit-content;
+    &:hover,
+    &:focus {
+      color: $red-color;
+      outline:none
+    }
+  }
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #e1eaee;
+    outline-color: $outline-color;
+  }
+}

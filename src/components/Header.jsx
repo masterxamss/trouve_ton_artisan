@@ -1,7 +1,8 @@
-import { NavLink, Link } from "react-router-dom";
-import { useRef } from "react";
+import { Link} from "react-router-dom";
+import { useRef} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import SearchBar from "./SearchBar";
+import MenuButton from "./MenuButton";
 
 const Header = () => {
   const navRef = useRef();
@@ -13,38 +14,30 @@ const Header = () => {
   return (
     <header>
       <section className="header-nav__container">
-        <Link to="/">
+        <Link to="/" className="logo-link">
           <img className="logo" src="/src/assets/images/Logo.png" alt="logo" />
         </Link>
         <div className="nav-container">
           <nav ref={navRef}>
             <ul>
-              <li>
-                <NavLink to="/batiment" onClick={showNavbar}>
-                  Bâtiment
-                </NavLink>
+              <li onClick={showNavbar}>
+                <MenuButton category={"Bâtiment"} />
               </li>
-              <li>
-                <NavLink to="/services" onClick={showNavbar}>
-                  Services
-                </NavLink>
+              <li onClick={showNavbar}>
+                <MenuButton category={"Services"} />
               </li>
-              <li>
-                <NavLink to="/fabrication" onClick={showNavbar}>
-                  Fabrication
-                </NavLink>
+              <li onClick={showNavbar}>
+                <MenuButton category={"Fabrication"} />
               </li>
-              <li>
-                <NavLink to="/alimentation" onClick={showNavbar}>
-                  Alimentation
-                </NavLink>
+              <li onClick={showNavbar}>
+                <MenuButton category={"Alimentation"} />
               </li>
             </ul>
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
               <FaTimes />
             </button>
           </nav>
-          <button className="nav-btn" onClick={showNavbar}>
+          <button className="nav-btn" onClick={showNavbar} name="menu">
             <FaBars />
           </button>
         </div>

@@ -14,7 +14,7 @@ export const getData = async () => {
 };
 
 // GET DATA FILTERED BY PARAMS
-export const fetchFilteredData = async (name, specialty, locationParam) => {
+export const fetchFilteredData = async (name, specialty, locationParam, category) => {
   try {
     const data = await getData();
 
@@ -22,8 +22,9 @@ export const fetchFilteredData = async (name, specialty, locationParam) => {
       const matchesName = !name || item.name.toLowerCase().includes(name.toLowerCase());
       const matchesSpecialty = !specialty || item.specialty === specialty;
       const matchesLocation = !locationParam || item.location === locationParam;
+      const matchesCategory = !category || item.category === category;
 
-      return matchesName && matchesSpecialty && matchesLocation;
+      return matchesName && matchesSpecialty && matchesLocation && matchesCategory;
     });
 
     return filtered;
