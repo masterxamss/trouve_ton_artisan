@@ -11,12 +11,8 @@ import Cookies from "./pages/Cookies"
 import LegalMentions from "./pages/LegalMentions"
 import Accessibility from "./pages/Accessibility"
 import PersonalData from "./pages/PersonalData"
-import FileWorker from "./pages/Batiment"
-import Batiment from "./pages/Batiment"
-import Services from "./pages/Services"
-import Fabrication from "./pages/Fabrication"
-import Alimentation from "./pages/Alimentation"
 import ListWorkers from "./pages/ListWorkers"
+import WorkerFile from "./pages/WorkerFile"
 
 function App() {
 
@@ -30,12 +26,8 @@ function App() {
         <Route path="/legal_mentions" element={<LegalMentions />} />
         <Route path="/accessibility" element={<Accessibility />} />
         <Route path="/personal_data" element={<PersonalData />} />
-        <Route path="/file_worker" element={<FileWorker />} />
-        <Route path="/batiment" element={<Batiment />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/fabrication" element={<Fabrication />} />
-        <Route path="/alimentation" element={<Alimentation />} />
         <Route path="/list_workers" element={<ListWorkers />} />
+        <Route path="/worker_file" element={<WorkerFile />} />
       </Routes>
       <Footer />
     </>

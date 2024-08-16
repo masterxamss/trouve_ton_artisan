@@ -1,7 +1,10 @@
 @import "../variables";
-header{
+
+header {
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+
 .header-nav__container {
   display: flex;
   align-items: center;
@@ -10,8 +13,13 @@ header{
   padding: 0 4rem;
   background-color: $white-color;
 
-  .logo {
-    height: 200px;
+  .logo-link {
+    &:focus {
+      outline: none;
+    }
+    .logo {
+      height: 200px;
+    }
   }
 
   div {
@@ -29,17 +37,6 @@ header{
       margin: 0;
       padding: 0;
       font-size: 1.2rem;
-    }
-
-    a {
-      margin: 0 2rem;
-      text-decoration: none;
-      color: $tertiary-color;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: $tertiary-color;
     }
   }
 
@@ -91,26 +88,12 @@ header{
         background-color: $primary-color;
         width: 100%;
         padding: 2rem 0;
-
-        li {
-          background-color: $primary-color;
-
-          a {
-            font-size: 1.2rem;
-            color: $white-color;
-          }
-
-          a:hover {
-            text-decoration: underline;
-            color: $white-color;
-            cursor: pointer;
-          }
-        }
       }
     }
 
     .responsive_nav {
       transform: none;
+      z-index: 20;
     }
 
     .nav-close-btn {
@@ -121,4 +104,3 @@ header{
     }
   }
 }
-

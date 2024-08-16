@@ -9,7 +9,7 @@
 }
 
 body {
-    min-width: 321px;
+    min-width: 430px;
 }
 
 .section-title {
@@ -17,7 +17,7 @@ body {
     font-weight: bold;
     width: 100%;
     color: $tertiary-color;
-    height: 6rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     margin-bottom: 0;
@@ -32,7 +32,7 @@ body {
     gap:.5rem;
     width: fit-content;
     padding: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid $red-color;
     font-size: $font-size-3;
     text-align: center;
