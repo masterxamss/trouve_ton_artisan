@@ -9,4 +9,11 @@
     url("/src/assets/images/icons/bg.png");
   background-size: 20%;
   background-repeat: repeat;
+
+  .worker-file-title{
+    width: 80%;
+    border-left: 5px solid $green-color;
+    margin: 2rem 0;
+  }
 }
+

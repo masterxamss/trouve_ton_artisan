@@ -18,12 +18,12 @@ const BreadCumbs = (props) => {
       <div className="printer-email">
         <span className="bread-cumbs-icon" onClick={handlePrint}>
           <FaPrint className="icon" />
-          <p>Imprimer la list</p>
+          <p>Imprimer</p>
         </span>
 
         <span className="bread-cumbs-icon" onClick={() => window.location.href = "mailto:?subject=" + document.title + "&body=" + encodeURI(document.location)}>
           <FaEnvelope className="icon" />
-          <p>Envoyer la list par email</p>
+          <p>Envoyer par email</p>
         </span>
       </div>
     </div>

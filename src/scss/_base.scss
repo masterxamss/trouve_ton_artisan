@@ -25,17 +25,22 @@ body {
   }
 
   .error-message {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap:.5rem;
     width: fit-content;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 2rem;
+    border-radius: 5px;
     border: 1px solid $red-color;
     font-size: $font-size-3;
     text-align: center;
     background-color: $secondary-color;
     color: $red-color;
+  }
+
+  .loading{
+    font-size: $font-size-3;
+    border: 1px solid $green-color;
+    border-radius: 5px;
+    color: $green-color;
+    padding: 2rem;
+    text-align: center;
+    background-color: $secondary-color;
   }

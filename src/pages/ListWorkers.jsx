@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { fetchFilteredData } from "../services/dataService";
-import { FaTriangleExclamation } from "react-icons/fa6";
 
 import CardWorker from "../components/CardWorker";
 import BreadCumbs from "../components/BreadCumbs";
@@ -50,7 +49,7 @@ const ListWorkers = () => {
       </div>
       <div className="container-list-workers">
         {loading ? (
-          <p>Chargement...</p>
+          <p className="loading">Chargement...</p>
         ) : error ? (
           <p className="error-message">{error}</p>
         ) : filteredData.length > 0 ? (
@@ -67,7 +66,6 @@ const ListWorkers = () => {
           </>
         ) : (
           <p className="error-message">
-            <FaTriangleExclamation />
             Aucun artisan ne correspond à vos critères.
           </p>
         )}

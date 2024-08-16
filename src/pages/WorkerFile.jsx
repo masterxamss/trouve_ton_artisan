@@ -1,7 +1,6 @@
 import { fetchFilteredData } from "../services/dataService";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FaTriangleExclamation } from "react-icons/fa6";
 
 import CardWorkerFile from "../components/CardWorkerFile";
 import BreadCumbs from "../components/BreadCumbs";
@@ -19,6 +18,7 @@ const WorkerFile = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // load filtered data
   useEffect(() => {
     const loadFilteredData = async () => {
       setLoading(true);
@@ -41,31 +41,42 @@ const WorkerFile = () => {
 
   return (
     <section className="section-worker-file">
-      <BreadCumbs home="Accueil" listWorkers="artisans" workerFile="fiche-artisan"/>
-      {loading ? (
-        <p>Chargement</p>
-      ) : error ? (
-        <p className="error-message">{error}</p>
-      ) : filteredData.length > 0 ? (
-        <>
-          {filteredData.map((worker) => (
-            <CardWorkerFile
-              key={worker.id}
-              name={worker.name}
-              specialty={worker.specialty}
-              note={worker.note}
-              location={worker.location}
-              email={worker.email}
-              category={worker.category}
-              website={worker.website}
-            />
-          ))}
-        </>
+      <BreadCumbs
+        home="Accueil"
+        listWorkers="artisans"
+        workerFile="fiche-artisan"
+      />
+      <div className="worker-file-title">
+        <h2 className="section-title">Artisan</h2>
+      </div>
+      {name !== undefined ? (
+        loading ? (
+          <p className="loading">Chargement</p>
+        ) : error ? (
+          <p className="error-message">{error}</p>
+        ) : filteredData.length > 0 ? (
+          <>
+            {filteredData.map((worker) => (
+              <CardWorkerFile
+                key={worker.id}
+                name={worker.name}
+                specialty={worker.specialty}
+                note={worker.note}
+                location={worker.location}
+                email={worker.email}
+                category={worker.category}
+                website={worker.website}
+                about={worker.about}
+              />
+            ))}
+          </>
+        ) : (
+          <p className="error-message">
+            Le dossier de l'artisan n'a pas été trouvé
+          </p>
+        )
       ) : (
-        <p className="error-message">
-          <FaTriangleExclamation />
-          Le dossier de l'artisan n'a pas été trouvé
-        </p>
+        <p className="error-message">Veuillez sélectionner un artisan !</p>
       )}
     </section>
   );
