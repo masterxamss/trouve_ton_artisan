@@ -120,6 +120,7 @@ const SearchBar = () => {
         onChange={handleInputChange}
         aria-label="Search by name"
         id="name"
+        autoComplete="one"
       />
 
       {/* Specialty dropdown */}

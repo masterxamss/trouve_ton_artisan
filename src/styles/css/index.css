@@ -1,7 +1,4 @@
 @import url("https://fonts.cdnfonts.com/css/graphik-trial");
-@import url("https://fonts.cdnfonts.com/css/graphik-trial");
-@import url("https://fonts.cdnfonts.com/css/graphik-trial");
-@import url("https://fonts.cdnfonts.com/css/graphik-trial");
 header {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -97,13 +94,6 @@ header {
     color: #FFFFFF;
   }
 }
-* {
-  font-family: "Graphik Trial", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   min-width: 360px;
 }
@@ -404,13 +394,6 @@ body {
     padding: 0.5rem 2rem;
   }
 }
-* {
-  font-family: "Graphik Trial", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   min-width: 360px;
 }
@@ -751,13 +734,6 @@ body {
     height: 200px;
   }
 }
-* {
-  font-family: "Graphik Trial", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   min-width: 360px;
 }
@@ -1297,13 +1273,6 @@ footer .container {
     font-size: 1.4rem;
   }
 }
-* {
-  font-family: "Graphik Trial", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   min-width: 360px;
 }
@@ -1376,4 +1345,11 @@ body {
   top: 10px;
   left: 10px;
   font-size: 1.7rem;
+}
+
+* {
+  font-family: "Graphik Trial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
