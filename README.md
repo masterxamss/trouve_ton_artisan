@@ -44,11 +44,20 @@ $ npm run dev
 $ sudo npm install --unsafe-perm=true --allow-root
 ```
 
-![worker-file (1)](https://github.com/user-attachments/assets/b9c4f5cd-2f8e-41ae-bbc7-ff7d1201cd71)
-![1_udvSMrSVGOgD4fxjMJHbOw](https://github.com/user-attachments/assets/e4158f14-c010-4f5e-82c2-befbcadbbe7c)
-![gulp-2x (1)](https://github.com/user-attachments/assets/0665e0fc-ec35-4219-95f9-b8e24a3163b6)
-![Novo Projeto](https://github.com/user-attachments/assets/bea40e90-4dbd-444a-9af6-0987e650ed75)
-![Unofficial_JavaScript_logo_2 svg (1)](https://github.com/user-attachments/assets/1159f514-06e6-463c-8811-a213a94d9d6d)
-![course_17101_image](https://github.com/user-attachments/assets/6a514c6f-79ef-4d07-bbbd-d734a0a31881)
-![18133 (1)](https://github.com/user-attachments/assets/02e900bc-6a8f-41b1-a1bd-5fb06e0bbb0f)
-![GitHub_Invertocat_Logo svg (1)](https://github.com/user-attachments/assets/5dce37d3-3f36-4df0-89e9-f8600ee47b6e)
+<div align="center">
+
+![18133 (1)](https://github.com/user-attachments/assets/9b47fcf1-e94a-4bcf-b4a6-0c6b511453ba)
+![gulp-2x (1)](https://github.com/user-attachments/assets/145019f2-cbf7-44fe-8d5a-44f23e9adfc0)
+![Unofficial_JavaScript_logo_2 svg (1)](https://github.com/user-attachments/assets/235cd9df-c46e-4343-ac09-9c38605e29e3)
+![worker-file (1)](https://github.com/user-attachments/assets/8855a5e2-083c-469f-82e7-b5009e9e9be3)
+![bootstrap (1)](https://github.com/user-attachments/assets/2bcacc41-e4e5-4e1c-946e-320981f84063)
+![download](https://github.com/user-attachments/assets/3b0206df-eea9-400a-901b-bbe144f7485b)
+![github-sign (1)](https://github.com/user-attachments/assets/fe00e201-373a-4018-9c8e-3a87f5862068)
+![Vite js (1)](https://github.com/user-attachments/assets/e6de0d47-8469-4406-b514-dca896887e3a)
+
+</div>
+
+
+
+
+
