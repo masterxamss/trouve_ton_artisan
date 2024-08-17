@@ -29,7 +29,8 @@ const CardWorkerFile = (props) => {
             <strong>Catergorie :</strong> {props.category}
           </li>
           <li>
-            <strong>Site :</strong> {props.website}
+            <strong>Site :</strong>{" "}
+            {props.website === "" ? "Non renseigne" : props.website}
           </li>
         </ul>
       </div>

@@ -935,11 +935,9 @@ footer .container {
 }
 .card-worker {
   position: relative;
-  width: calc(33.33% - 1rem);
   border: 1px solid #0074C7;
   border-radius: 10px;
   background-color: #F1F8FC;
-  min-width: 360px;
   cursor: pointer;
 }
 .card-worker ul {
@@ -1024,7 +1022,10 @@ footer .container {
 }
 
 @media only screen and (max-width: 1024px) {
-  .printer-email .bread-cumbs-icon p {
+  .bread-cumbs {
+    width: 95%;
+  }
+  .bread-cumbs .printer-email .bread-cumbs-icon p {
     display: none;
   }
 }
@@ -1062,7 +1063,7 @@ footer .container {
 .worker-infos ul {
   font-size: 1.2rem;
   color: #0074C7;
-  list-style-type: none;
+  list-style-type: circle;
   padding-left: 5rem;
   margin: 0;
 }
@@ -1239,15 +1240,21 @@ footer .container {
   gap: 1rem;
   width: 80%;
   list-style-type: none;
+  padding: 0;
+}
+.section-list-workers .container-list-workers li {
+  flex: 1 0 400px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .container-title {
-    margin: 1rem 0 !important;
-    width: 90% !important;
+  .section-list-workers .container-title {
+    width: 95%;
   }
-  .container-title .section-title {
+  .section-list-workers .container-title .section-title {
     font-size: 1.4rem;
+  }
+  .section-list-workers .container-list-workers {
+    width: 95%;
   }
 }
 .section-worker-file {
