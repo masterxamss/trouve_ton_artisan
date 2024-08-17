@@ -6,6 +6,7 @@ import CardWorker from "../components/CardWorker";
 import BreadCumbs from "../components/BreadCumbs";
 
 const ListWorkers = () => {
+  // Access the state passed through the location from the previous page (e.g., search or selection)
   const location = useLocation();
   const {
     name,
@@ -14,10 +15,12 @@ const ListWorkers = () => {
     category,
   } = location.state || {};
 
+
   const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // useEffect to load filtered worker data when the component mounts or any dependencies change
   useEffect(() => {
     const loadFilteredData = async () => {
       setLoading(true);
@@ -47,12 +50,16 @@ const ListWorkers = () => {
         </h2>
         <p>Il y a {filteredData.length} dossier(s)</p>
       </div>
+      
+      {/* Container for the list of workers */}
       <div className="container-list-workers">
         {loading ? (
           <p className="loading">Chargement...</p>
         ) : error ? (
+
           <p className="error-message">{error}</p>
         ) : filteredData.length > 0 ? (
+          // Display the list of workers if data is successfully fetched and contains items
           <>
             {filteredData.map((worker) => (
               <CardWorker
@@ -65,6 +72,7 @@ const ListWorkers = () => {
             ))}
           </>
         ) : (
+          // Display message if no workers match the search criteria
           <p className="error-message">
             Aucun artisan ne correspond à vos critères.
           </p>
@@ -75,3 +83,4 @@ const ListWorkers = () => {
 };
 
 export default ListWorkers;
+
