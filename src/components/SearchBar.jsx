@@ -39,6 +39,12 @@ const SearchBar = () => {
     setShowSpecialty(false);
   };
 
+  const resetItemsState = () => {
+    setSelectedSpecialty("");
+    setSelectedLocation("");
+    setName("");  // Corrigido para usar setName("")
+  };
+
   const handleClickOutside = (event) => {
     if (specialtyRef.current && !specialtyRef.current.contains(event.target)) {
       setShowSpecialty(false);
@@ -97,6 +103,7 @@ const SearchBar = () => {
         value={name}
         onChange={handleInputChange}
         aria-label="Search by name"
+        id="name"
       />
 
       <div className="search-items" ref={specialtyRef}>
@@ -173,15 +180,17 @@ const SearchBar = () => {
 
       <button
         className="search-button"
-        onClick={handleSearch}
+        onClick={() => { handleSearch(); resetItemsState(); }} // Corrigido para separar funções
         aria-label="Search"
       >
         <FaSearch className="search-icon" />
+        <span>Rechercher</span>
       </button>
     </div>
   );
 };
 
 export default SearchBar;
+
 
 

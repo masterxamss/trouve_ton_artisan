@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaCircleExclamation } from "react-icons/fa6";
 
 import { printStars } from "../services/utilities"; // Utility function to print star ratings
 import { fetchTopData } from "../services/dataService"; // Service function to fetch top workers data
 
 const Classification = () => {
-
   const top = true;
+  const [name, setName] = useState("");
+  const navigate = useNavigate();
   const [filteredTopData, setFilteredTopData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -13,18 +16,39 @@ const Classification = () => {
   // useEffect to fetch data when the component mounts
   useEffect(() => {
     const loadFilteredTopData = async () => {
-      setLoading(true); 
+      setLoading(true);
       try {
         const filtered = await fetchTopData(top);
-        setFilteredTopData(filtered); 
+        setFilteredTopData(filtered);
       } catch {
-        setError("There was an issue fetching the workers"); 
+        setError("There was an issue fetching the workers");
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
     loadFilteredTopData();
   }, [top]);
+
+  // Handles the "Enter" key press event on the specialty buttons.
+  const handleNameKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleName(event);
+    }
+  };
+
+  // Updates the state with the value of the selected specialty.
+  const handleNameValue = (event) => {
+    setName(event.target.value);
+  };
+
+  // Navigates to the worker_file page with the selected name as state.
+  const handleName = () => {
+    navigate("/worker_file", {
+      state: {
+        name: name,
+      },
+    });
+  };
 
   return (
     <section className="section-classification">
@@ -42,9 +66,9 @@ const Classification = () => {
       ) : error ? (
         <p>{error}</p>
       ) : filteredTopData.length > 0 ? (
-        <div className="row gap-3 mt-5">
+        <div className="container-classification">
           {filteredTopData.map((worker) => (
-            <div className="col-sm" key={worker.id}>
+            <div className="card-classification" key={worker.id}>
               <div className="classification-img">
                 <img
                   src="/src/assets/images/employee-of-the-month.png"
@@ -70,7 +94,14 @@ const Classification = () => {
                     {worker.location}
                   </li>
                 </ul>
-                <button value={worker.id} className="classification-btn">
+                <button
+                  value={worker.name}
+                  className="classification-btn"
+                  onMouseEnter={handleNameValue} // Set specialty on mouse enter
+                  onTouchStart={handleNameValue} // Set specialty on touch start (for mobile)
+                  onClick={handleName} // Navigate to the list page on click
+                  onKeyDown={handleNameKeyDown} // Handle "Enter" key press
+                >
                   Voir artisan
                 </button>
               </div>
@@ -79,7 +110,8 @@ const Classification = () => {
         </div>
       ) : (
         <p className="error-message" tabIndex={0}>
-          Aucun artisan avec une note supérieure à 4,8
+          <FaCircleExclamation />
+          {' '}Aucun artisan avec une note supérieure à 4,8
         </p>
       )}
     </section>
@@ -87,4 +119,3 @@ const Classification = () => {
 };
 
 export default Classification;
-

@@ -15,16 +15,22 @@
     width: 80%;
     margin: 3rem;
 
-    img{
+    img {
       width: 100px;
     }
   }
 
-  .row {
+  .container-classification{
     width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1rem;
 
-    .col-sm {
-        height: 100%;
+    .card-classification {
+      width: calc(33.33% - 1rem);
+      min-width: 350px;
+      height: 100%;
       color: white;
       font-size: $font-size-3;
       padding: 0;
@@ -48,7 +54,7 @@
 
       .classification-details {
         display: flex;
-        
+
         flex-direction: column;
         align-items: center;
         background: radial-gradient(
@@ -95,9 +101,10 @@
           color: $tertiary-color;
           background-color: $secondary-color;
           font-weight: 500;
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             outline: 2px solid $outline-color;
-            }
+          }
         }
       }
     }
@@ -105,21 +112,21 @@
 }
 
 @media only screen and (max-width: 1024px) {
-
-    .classification-title{
-        height: fit-content;
-        margin-top: 2rem;
-        .section-title{
-            font-size: $fs-tablet-h2;
-        }
+  .classification-title {
+    height: fit-content;
+    margin-top: 2rem;
+    .section-title {
+      font-size: $fs-tablet-h2;
     }
+  }
 
-    .classification-details{
-        font-size: $font-size-2;
-    }
+  .classification-details {
+    font-size: $font-size-2;
+  }
 }
 
 @media only screen and (max-width: 540px) {
-    .classification-details{
-        font-size: $font-size-1;
-    }}
+  .classification-details {
+    font-size: $font-size-1;
+  }
+}
