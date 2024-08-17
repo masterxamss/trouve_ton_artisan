@@ -19,7 +19,7 @@ npm@10.5.2 or higher
 From your command line, first clone portfolio:
 ```
 # Clone the repository
-$ git clone https://github.com/masterxamss/portfolio.git](https://github.com/masterxamss/trouve_ton_artisan.git
+$ git clone https://github.com/masterxamss/trouve_ton_artisan.git
 
 # Move into the repository
 $ cd trouve_ton_artisan
