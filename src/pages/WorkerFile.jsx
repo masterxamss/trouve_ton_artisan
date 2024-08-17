@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 // Components
 import CardWorkerFile from "../components/CardWorkerFile";
-import BreadCumbs from "../components/BreadCumbs";
+import BreadCrumbs from "../components/BreadCrumbs";
 import ContactForm from "../components/ContactForm";
 
 const WorkerFile = () => {
@@ -48,7 +48,7 @@ const WorkerFile = () => {
 
   return (
     <section className="section-worker-file">
-      <BreadCumbs
+      <BreadCrumbs
         home="Accueil"
         listWorkers="artisans"
         workerFile="fiche-artisan"

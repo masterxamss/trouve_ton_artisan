@@ -4,6 +4,7 @@ import { getData } from "../services/dataService";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {
+  // State variables for storing the fetched data, UI states, and user selections
   const [data, setData] = useState([]);
   const [showSpecialty, setShowSpecialty] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
@@ -11,11 +12,14 @@ const SearchBar = () => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [name, setName] = useState("");
 
+  // References for dropdowns to handle clicks outside them
   const specialtyRef = useRef();
   const locationRef = useRef();
-  
+
+  // Hook for navigation between routes
   const navigate = useNavigate();
 
+  // Fetch data when the component is mounted
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,22 +33,26 @@ const SearchBar = () => {
     fetchData();
   }, []);
 
+  // Toggle the visibility of the specialty dropdown
   const toggleSpecialty = () => {
     setShowSpecialty((prev) => !prev);
     setShowLocation(false);
   };
 
+  // Toggle the visibility of the location dropdown
   const toggleLocation = () => {
     setShowLocation((prev) => !prev);
     setShowSpecialty(false);
   };
 
+  // Reset the search fields after performing a search
   const resetItemsState = () => {
     setSelectedSpecialty("");
     setSelectedLocation("");
-    setName("");  // Corrigido para usar setName("")
+    setName("");
   };
 
+  // Handle clicks outside the dropdown to close them
   const handleClickOutside = (event) => {
     if (specialtyRef.current && !specialtyRef.current.contains(event.target)) {
       setShowSpecialty(false);
@@ -54,6 +62,7 @@ const SearchBar = () => {
     }
   };
 
+  // Add event listener for detecting clicks outside dropdowns when the component mounts
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -61,28 +70,33 @@ const SearchBar = () => {
     };
   }, []);
 
+  // Handle keyboard interaction for the dropdowns (enter key)
   const handleKeyDown = (event, handler) => {
     if (event.key === "Enter") {
       handler(event);
     }
   };
 
+  // Handle selecting a specialty from the dropdown
   const handleSpecialtySelect = (event) => {
     const selectedValue = event.target.textContent;
     setSelectedSpecialty(selectedValue);
     setShowSpecialty(false);
   };
 
+  // Handle selecting a location from the dropdown
   const handleLocationSelect = (event) => {
     const selectedValue = event.target.textContent;
     setSelectedLocation(selectedValue);
     setShowLocation(false);
   };
 
+  // Update the name state as the user types
   const handleInputChange = (event) => {
     setName(event.target.value);
   };
 
+  // Navigate to the search results page with the selected search parameters
   const handleSearch = () => {
     navigate("/list_workers", {
       state: {
@@ -93,8 +107,10 @@ const SearchBar = () => {
     });
   };
 
+  // Render the search bar UI
   return (
     <div className="searchBar">
+      {/* Input for searching by name */}
       <input
         tabIndex="0"
         type="text"
@@ -106,6 +122,7 @@ const SearchBar = () => {
         id="name"
       />
 
+      {/* Specialty dropdown */}
       <div className="search-items" ref={specialtyRef}>
         <div
           className="items-placeholder"
@@ -120,6 +137,7 @@ const SearchBar = () => {
           <FaChevronDown className="chevron-down" />
         </div>
 
+        {/* Dropdown list for specialties */}
         {showSpecialty && (
           <div
             id="specialty-dropdown"
@@ -142,6 +160,7 @@ const SearchBar = () => {
         )}
       </div>
 
+      {/* Location dropdown */}
       <div className="search-items" ref={locationRef}>
         <div
           className="items-placeholder"
@@ -156,6 +175,7 @@ const SearchBar = () => {
           <FaChevronDown className="chevron-down" />
         </div>
 
+        {/* Dropdown list for locations */}
         {showLocation && (
           <div
             id="location-dropdown"
@@ -178,9 +198,10 @@ const SearchBar = () => {
         )}
       </div>
 
+      {/* Search button */}
       <button
         className="search-button"
-        onClick={() => { handleSearch(); resetItemsState(); }} // Corrigido para separar funções
+        onClick={() => { handleSearch(); resetItemsState(); }}
         aria-label="Search"
       >
         <FaSearch className="search-icon" />
@@ -191,6 +212,7 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
 
 
 

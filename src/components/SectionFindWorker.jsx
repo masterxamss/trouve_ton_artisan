@@ -18,11 +18,11 @@ const SectionFindWorker = () => {
             Pour vous aider à <strong>trouver l&apos;artisan</strong> parfait,
             commencez par choisir la catégorie qui correspond à votre projet.
             Que ce soit pour des <strong>travaux</strong> de rénovation, de{" "}
-            <strong>plomberie</strong>, <strong>d’électricité</strong> ou tout
+            <strong>plomberie</strong>, <strong>d&apos;électricité</strong> ou tout
             autre besoin, <strong>Trouve ton artisan</strong> vous permet de
             cibler facilement les professionnels qualifiés dans chaque domaine.
             Sélectionnez la catégorie qui vous intéresse et accédez
-            instantanément à une liste <strong>d’artisans</strong> prêts à
+            instantanément à une liste <strong>d&apos;artisans</strong> prêts à
             réaliser vos <strong>travaux</strong>.
           </p>
         </div>
