@@ -9,10 +9,11 @@
 @import 'components/breadCumbs';
 @import 'components/menuButton';
 @import 'components/cardWorkerFile';
-@import 'components/workerFile';
+@import 'components/contactForm';
 
 //PAGES
 @import './pages/listWorkers';
+@import './pages/workerFile';
 
 
 @import 'base';

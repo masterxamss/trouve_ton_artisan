@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { printStars } from "../services/utilities";
 
-const CardWorker = ({ name, note, specialty, location }) => {
+const CardWorker = ({ name, note, specialty, location}) => {
 
   const navigate = useNavigate();
   const handleCategory = () => {

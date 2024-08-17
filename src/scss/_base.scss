@@ -26,13 +26,24 @@ body {
 
   .error-message {
     width: fit-content;
-    padding: 2rem;
+    padding: 4rem 2rem;
     border-radius: 5px;
-    border: 1px solid $red-color;
     font-size: $font-size-3;
     text-align: center;
-    background-color: $secondary-color;
-    color: $red-color;
+    background-color: $red-color;
+    color: $white-color;
+    position: relative;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+
+    margin: 2rem;
+
+    a{
+      color: $white-color;
+      text-decoration: none;
+    }
   }
 
   .loading{
@@ -45,9 +56,9 @@ body {
     background-color: $secondary-color;
   }
 
-  .carousel-control{
+  .load-more-button{
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     border: none;
     padding: .5rem;
     color: $primary-color;
@@ -56,4 +67,19 @@ body {
     &:hover{
       color: $tertiary-color;
     }
+  }
+
+  .close-icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .exclamation-icon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.7rem;
   }

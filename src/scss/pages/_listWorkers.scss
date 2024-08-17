@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    box-shadow: none;
 
     h2 {
       width: fit-content;
@@ -37,9 +38,11 @@
   .container-list-workers {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     width: 80%;
+    list-style-type: none;
   }
 }
 
