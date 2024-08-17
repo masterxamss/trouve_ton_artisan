@@ -18,5 +18,14 @@
 
 @import 'base';
 
+//font
+@import url('https://fonts.cdnfonts.com/css/graphik-trial');
 
 
+
+* {
+    font-family: 'Graphik Trial', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
