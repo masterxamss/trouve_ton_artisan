@@ -56,9 +56,7 @@ const CardWorkerFile = (props) => {
             className="accordion-collapse collapse show"
             aria-labelledby="panelsStayOpen-headingOne"
           >
-            <div className="accordion-body">
-              {props.about}
-            </div>
+            <div className="accordion-body">{props.about}</div>
           </div>
         </div>
       </div>

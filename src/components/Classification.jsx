@@ -111,7 +111,7 @@ const Classification = () => {
       ) : (
         <p className="error-message" tabIndex={0}>
           <FaCircleExclamation />
-          {' '}Aucun artisan avec une note supérieure à 4,8
+          Aucun artisan avec une note supérieure à 4,8
         </p>
       )}
     </section>
