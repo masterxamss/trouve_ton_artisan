@@ -47,6 +47,10 @@ header {
   opacity: 0;
   font-size: 1.8rem;
 }
+.header-nav__container .nav-btn:focus {
+  outline: 2px solid #ffd000;
+  outline-offset: 2px;
+}
 
 @media only screen and (max-width: 1024px) {
   .header-nav__container {
@@ -132,9 +136,22 @@ body {
   border: 1px solid #82B864;
   border-radius: 5px;
   color: #82B864;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #F1F8FC;
+}
+
+.carousel-control {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  color: #0074C7;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.carousel-control:hover {
+  color: #00487C;
 }
 
 .searchBar {
@@ -383,9 +400,22 @@ body {
   border: 1px solid #82B864;
   border-radius: 5px;
   color: #82B864;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #F1F8FC;
+}
+
+.carousel-control {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  color: #0074C7;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.carousel-control:hover {
+  color: #00487C;
 }
 
 .find-worker {
@@ -692,9 +722,22 @@ body {
   border: 1px solid #82B864;
   border-radius: 5px;
   color: #82B864;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #F1F8FC;
+}
+
+.carousel-control {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  color: #0074C7;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.carousel-control:hover {
+  color: #00487C;
 }
 
 .section-classification {
@@ -823,6 +866,7 @@ footer .container {
   border-radius: 10px;
   background-color: #F1F8FC;
   min-width: 360px;
+  cursor: pointer;
 }
 .card-worker ul {
   padding: 2rem;
@@ -1112,7 +1156,20 @@ body {
   border: 1px solid #82B864;
   border-radius: 5px;
   color: #82B864;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #F1F8FC;
+}
+
+.carousel-control {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  color: #0074C7;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.carousel-control:hover {
+  color: #00487C;
 }

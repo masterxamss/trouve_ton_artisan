@@ -13,6 +13,7 @@ const SearchBar = () => {
 
   const specialtyRef = useRef();
   const locationRef = useRef();
+  
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -54,15 +55,9 @@ const SearchBar = () => {
     };
   }, []);
 
-  const handleKeyDownSpecialty = (event) => {
+  const handleKeyDown = (event, handler) => {
     if (event.key === "Enter") {
-      toggleSpecialty();
-    }
-  };
-
-  const handleKeyDownLocation = (event) => {
-    if (event.key === "Enter") {
-      toggleLocation();
+      handler(event);
     }
   };
 
@@ -78,21 +73,14 @@ const SearchBar = () => {
     setShowLocation(false);
   };
 
-  const handleItemKeyDown = (event, selectHandler) => {
-    if (event.key === "Enter") {
-      selectHandler(event);
-    }
-  };
-
   const handleInputChange = (event) => {
     setName(event.target.value);
   };
 
   const handleSearch = () => {
-    // Navigate to ListWorkers and send the status
     navigate("/list_workers", {
       state: {
-        name: name,
+        name,
         specialty: selectedSpecialty,
         location: selectedLocation,
       },
@@ -102,37 +90,45 @@ const SearchBar = () => {
   return (
     <div className="searchBar">
       <input
+        tabIndex="0"
         type="text"
         placeholder="Nom"
         className="field-name"
         value={name}
         onChange={handleInputChange}
+        aria-label="Search by name"
       />
 
       <div className="search-items" ref={specialtyRef}>
         <div
           className="items-placeholder"
-          tabIndex="0"
           onClick={toggleSpecialty}
-          onKeyDown={handleKeyDownSpecialty}
+          onKeyDown={(event) => handleKeyDown(event, toggleSpecialty)}
+          tabIndex="0"
+          role="button"
+          aria-expanded={showSpecialty}
+          aria-controls="specialty-dropdown"
         >
           <p>{selectedSpecialty || "Métier"}</p>
           <FaChevronDown className="chevron-down" />
         </div>
 
         {showSpecialty && (
-          <div className="items">
-            {data.map((specialty, index) => (
+          <div
+            id="specialty-dropdown"
+            className="items"
+            role="listbox"
+            aria-label="Specialties"
+          >
+            {data.map((item, index) => (
               <p
                 key={index}
-                value={specialty.specialty}
+                role="option"
                 tabIndex="0"
                 onClick={handleSpecialtySelect}
-                onKeyDown={(event) =>
-                  handleItemKeyDown(event, handleSpecialtySelect)
-                }
+                onKeyDown={(event) => handleKeyDown(event, handleSpecialtySelect)}
               >
-                {specialty.specialty}
+                {item.specialty}
               </p>
             ))}
           </div>
@@ -142,34 +138,44 @@ const SearchBar = () => {
       <div className="search-items" ref={locationRef}>
         <div
           className="items-placeholder"
-          tabIndex="0"
           onClick={toggleLocation}
-          onKeyDown={handleKeyDownLocation}
+          onKeyDown={(event) => handleKeyDown(event, toggleLocation)}
+          tabIndex="0"
+          role="button"
+          aria-expanded={showLocation}
+          aria-controls="location-dropdown"
         >
           <p>{selectedLocation || "Ville"}</p>
           <FaChevronDown className="chevron-down" />
         </div>
 
         {showLocation && (
-          <div className="items">
-            {data.map((location, index) => (
+          <div
+            id="location-dropdown"
+            className="items"
+            role="listbox"
+            aria-label="Locations"
+          >
+            {data.map((item, index) => (
               <p
                 key={index}
-                value={location.location}
+                role="option"
                 tabIndex="0"
                 onClick={handleLocationSelect}
-                onKeyDown={(event) =>
-                  handleItemKeyDown(event, handleLocationSelect)
-                }
+                onKeyDown={(event) => handleKeyDown(event, handleLocationSelect)}
               >
-                {location.location}
+                {item.location}
               </p>
             ))}
           </div>
         )}
       </div>
 
-      <button className="search-button" onClick={handleSearch} name="search-button">
+      <button
+        className="search-button"
+        onClick={handleSearch}
+        aria-label="Search"
+      >
         <FaSearch className="search-icon" />
       </button>
     </div>
@@ -177,3 +183,5 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
+

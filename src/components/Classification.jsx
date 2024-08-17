@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
-import { printStars } from "../services/utilities";
-import { fetchTopData } from "../services/dataService";
-import { FaTriangleExclamation } from "react-icons/fa6";
-const Classification = () => {
-  const top = true;
 
+import { printStars } from "../services/utilities"; // Utility function to print star ratings
+import { fetchTopData } from "../services/dataService"; // Service function to fetch top workers data
+
+const Classification = () => {
+
+  const top = true;
   const [filteredTopData, setFilteredTopData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // useEffect to fetch data when the component mounts
   useEffect(() => {
     const loadFilteredTopData = async () => {
-      setLoading(true);
+      setLoading(true); 
       try {
         const filtered = await fetchTopData(top);
-        setFilteredTopData(filtered);
+        setFilteredTopData(filtered); 
       } catch {
-        setError("There was an issue fetching the workers");
+        setError("There was an issue fetching the workers"); 
       } finally {
-        setLoading(false);
+        setLoading(false); 
       }
     };
     loadFilteredTopData();
@@ -34,6 +36,7 @@ const Classification = () => {
         />
       </div>
 
+      {/* Conditional rendering based on loading, error, and data status */}
       {loading ? (
         <p>Chargement...</p>
       ) : error ? (
@@ -48,7 +51,6 @@ const Classification = () => {
                   alt="employee of the month"
                 />
               </div>
-
               <div className="classification-details">
                 <ul>
                   <li>
@@ -68,7 +70,6 @@ const Classification = () => {
                     {worker.location}
                   </li>
                 </ul>
-
                 <button value={worker.id} className="classification-btn">
                   Voir artisan
                 </button>
@@ -78,7 +79,6 @@ const Classification = () => {
         </div>
       ) : (
         <p className="error-message" tabIndex={0}>
-          <FaTriangleExclamation />
           Aucun artisan avec une note supérieure à 4,8
         </p>
       )}
@@ -87,3 +87,4 @@ const Classification = () => {
 };
 
 export default Classification;
+
