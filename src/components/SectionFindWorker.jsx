@@ -44,7 +44,7 @@ const SectionFindWorker = () => {
             <strong>Trouve ton artisan</strong>, nous vous aidons à faire le bon
             choix en vous proposant une sélection <strong>d&apos;artisans</strong>{" "}
             qualifiés, fiables et près de chez vous. Comparez les avis,
-            consultez leurs réalisations, et optez pour celui qui correspond le
+            et optez pour celui qui correspond le
             mieux à vos besoins et à votre budget. Avec notre plateforme,
             choisir un <strong>artisan</strong> devient simple et serein.
           </p>

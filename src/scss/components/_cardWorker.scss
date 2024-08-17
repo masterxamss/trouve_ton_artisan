@@ -1,11 +1,9 @@
 @import "variables";
 .card-worker {
   position: relative;
-  width: calc(33.33% - 1rem);
   border: 1px solid $primary-color;
   border-radius: 10px;
   background-color: $secondary-color;
-  min-width: 360px;
   cursor: pointer;
 
   ul {

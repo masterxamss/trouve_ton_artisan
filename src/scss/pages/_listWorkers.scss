@@ -43,15 +43,24 @@
     gap: 1rem;
     width: 80%;
     list-style-type: none;
+    padding: 0;
+
+    li {
+      flex: 1 0 400px;
+    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .container-title{
-    margin: 1rem 0 !important;
-    width: 90% !important;
-    .section-title{
-      font-size: $fs-tablet-h2;
-    } 
+  .section-list-workers {
+    .container-title {
+      width: 95%;
+      .section-title {
+        font-size: $fs-tablet-h2;
+      }
+    }
+    .container-list-workers {
+      width: 95%;
+    }
   }
 }
