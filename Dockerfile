@@ -1,20 +1,32 @@
-# Use the official Node.js image as the base image
-FROM node:18
+# Estágio de construção
+FROM node:14 AS build
 
-# Set the working directory in the container
-WORKDIR /app
+# Define o diretório de trabalho
+WORKDIR /src
 
-# Copy the application files into the working directory
-COPY . /app
+# Copia o package.json e package-lock.json
+COPY package*.json ./
 
-# Install the application dependencies
+# Instala as dependências
 RUN npm install
 
-# Build the React application
+# Copia o restante do código
+COPY . .
+
+# Compila a aplicação React para produção
 RUN npm run build
 
-# Expose port 3000
-EXPOSE 3000
+# Estágio de produção
+FROM nginx:alpine
 
-# Define the entry point for the container
-CMD ["npm", "start"]
+# Remove o arquivo do default server configurado no Nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copia os arquivos gerados na pasta build para o Nginx
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Exposição da porta onde a aplicação será executada
+EXPOSE 80
+
+# Inicia o Nginx
+CMD ["nginx", "-g", "daemon off;"]
