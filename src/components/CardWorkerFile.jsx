@@ -1,12 +1,13 @@
 import { printStars } from "../services/utilities";
 import PropTypes from "prop-types";
+import workerFileImg from "../assets/images/icons/worker-file.png";
 
 const CardWorkerFile = (props) => {
   return (
     <>
       <div className="worker-infos">
         <img
-          src="/src/assets/images/icons/worker-file.png"
+          src={workerFileImg}
           alt="fiche d'artisan"
         />
         <ul>
