@@ -1,3 +1,4 @@
+import React from "react";
 import { fetchFilteredData } from "../services/dataService";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
