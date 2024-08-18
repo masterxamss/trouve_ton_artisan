@@ -5,6 +5,11 @@
     <title>Page Not Found</title>
   </head>
   <body>
-    <img src="/src/assets/images/404.webp" alt="image 404" width="300" style="margin: 0 auto; display: block;">
+    <img class="image-404" src="" alt="image 404" width="300" style="margin: 0 auto; display: block;">
+
+    <script>
+      const image404 = document.querySelector('.image-404');
+      image404.src = "/src/assets/images/404.webp";
+    </script>
   </body>
 </html>
