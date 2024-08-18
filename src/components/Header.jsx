@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import SearchBar from "./SearchBar";
 import MenuButton from "./MenuButton";
+import logo from "../assets/images/Logo.png";
 
 const Header = () => {
   const navRef = useRef();
@@ -15,7 +16,7 @@ const Header = () => {
     <header>
       <section className="header-nav__container">
         <Link to="/" className="logo-link">
-          <img className="logo" src="/src/assets/images/Logo.png" alt="logo" />
+          <img className="logo" src={logo} alt="logo" />
         </Link>
         <div className="nav-container">
           <nav ref={navRef} aria-label="Main navigation">

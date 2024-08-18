@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCircleExclamation } from "react-icons/fa6";
+import image from  "../assets/images/icons/artisan-calssification.png";
+import imageEmployee from "../assets/images/employee-of-the-month.png";
 
 import { printStars } from "../services/utilities"; // Utility function to print star ratings
 import { fetchTopData } from "../services/dataService"; // Service function to fetch top workers data
+
 
 const Classification = () => {
   const top = true;
@@ -55,7 +58,7 @@ const Classification = () => {
       <div className="classification-title">
         <h2 className="section-title">Artisan du mois</h2>
         <img
-          src="/src/assets/images/icons/artisan-calssification.png"
+          src={image}
           alt="artisan classification"
         />
       </div>
@@ -71,7 +74,7 @@ const Classification = () => {
             <div className="card-classification" key={worker.id}>
               <div className="classification-img">
                 <img
-                  src="/src/assets/images/employee-of-the-month.png"
+                  src={imageEmployee}
                   alt="employee of the month"
                 />
               </div>
