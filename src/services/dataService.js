@@ -1,7 +1,7 @@
-// GET ALL DATA
+
 export const getData = async () => {
   try {
-    const response = await fetch("/src/assets/datas.json");
+    const response = await fetch("/assets/datas.json");
     if (!response.ok) {
       throw new Error("Error loading JSON file");
     }
