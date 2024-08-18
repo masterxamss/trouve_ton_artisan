@@ -2,7 +2,7 @@
 FROM node:14 AS build
 
 # Define o diretório de trabalho
-WORKDIR /trouve_ton_artisan
+WORKDIR /app
 
 # Copia o package.json e package-lock.json
 COPY package*.json ./
