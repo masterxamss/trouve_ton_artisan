@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Remove o arquivo do default server configurado no Nginx
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copia os arquivos gerados na pasta build para o Nginx
-COPY --from=build /app/build /usr/share/nginx/html
+# Copia os arquivos gerados na pasta dist para o Nginx
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Exposição da porta onde a aplicação será executada
 EXPOSE 80
