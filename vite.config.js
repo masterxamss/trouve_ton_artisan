@@ -15,5 +15,5 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/trouve_ton_artisan/',
+  //base: '/trouve_ton_artisan/',
 })
