@@ -1,6 +1,7 @@
 import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { printStars } from "../services/utilities";
+import catBg1 from "../assets/images/icons/cat-bg-1.webp";
 
 const CardWorker = ({ name, note, specialty, location}) => {
 
@@ -15,7 +16,7 @@ const CardWorker = ({ name, note, specialty, location}) => {
 
   return (
     <div className="card-worker" tabIndex={0} onClick={handleCategory}>
-      <img src="/src/assets/images/icons/cat-bg-1.webp" alt="icon workers" />
+      <img src={catBg1} alt="icon workers" />
       <ul>
         <li>
           <strong>Nom :</strong> {name}
