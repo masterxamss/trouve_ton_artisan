@@ -95,7 +95,7 @@ header {
   }
 }
 body {
-  min-width: 360px;
+  min-width: 400px;
 }
 
 .section-title {
@@ -395,7 +395,7 @@ body {
   }
 }
 body {
-  min-width: 360px;
+  min-width: 400px;
 }
 
 .section-title {
@@ -735,7 +735,7 @@ body {
   }
 }
 body {
-  min-width: 360px;
+  min-width: 400px;
 }
 
 .section-title {
@@ -1257,6 +1257,11 @@ footer .container {
     width: 95%;
   }
 }
+@media only screen and (max-width: 500px) {
+  .section-list-workers .container-list-workers li {
+    flex: 1 0 100%;
+  }
+}
 .section-worker-file {
   display: flex;
   flex-direction: column;
@@ -1278,10 +1283,11 @@ footer .container {
   }
   .section-worker-file .worker-file-title h2 {
     font-size: 1.4rem;
+    width: fit-content;
   }
 }
 body {
-  min-width: 360px;
+  min-width: 400px;
 }
 
 .section-title {
