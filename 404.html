@@ -5,12 +5,14 @@
     <title>Page Not Found</title>
   </head>
   <body>
-    <img class="image-404" src="/trouve_ton_artisan/assets/04-DHMrH89m.webp" alt="image 404" width="300" style="margin: 0 auto; display: block;">
+    <img class="image-404" src="assets/images/404-DHMrH89m.webp" alt="image 404" width="300" style="margin: 0 auto; display: block;">
 
-
+    <script>
+      //import * as url from '/src/assets/images/404.webp';
+      //const url = require('/src/assets/images/404.webp');
+      console.log(url);
+      const image404 = document.querySelector('.image-404');
+      image404.src = url.default;
+    </script>
   </body>
-  <!-- <script>
-    const image404 = document.querySelector('.image-404');
-    image404.src = '/trouve_ton_artisan/assets/images/404.webp'
-  </script> -->
 </html>
