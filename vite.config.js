@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,9 +11,23 @@ export default defineConfig({
         {
           src: 'src/assets/datas.json',
           dest: 'assets'
-        }
+        },
+        // {
+        //   src: '404.html',
+        //   dest: ''
+        // }
       ]
     })
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  server: {
+    historyApiFallback: true,
+  },
   base: '/trouve_ton_artisan/',
 })
