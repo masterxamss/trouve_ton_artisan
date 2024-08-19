@@ -19,15 +19,5 @@ export default defineConfig({
       ]
     })
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
-  server: {
-    historyApiFallback: true,
-  },
   base: '/trouve_ton_artisan/',
 })
