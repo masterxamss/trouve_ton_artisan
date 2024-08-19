@@ -3,9 +3,9 @@
   <head>
     <title>Page Not Found</title>
     <script type="text/javascript">
-      if (window.location.pathname !== "/trouve_ton_artisan/list_workers") {
+      if (window.location.pathname === "/trouve_ton_artisan/list_workers") {
         window.location.href = "/trouve_ton_artisan/list_workers" + window.location.pathname;
-      } else if(window.location.pathname !== "/trouve_ton_artisan/worker_file")
+      } else if(window.location.pathname === "/trouve_ton_artisan/worker_file")
       window.location.href = "/trouve_ton_artisan/worker_file" + window.location.pathname;
     </script>
   </head>
