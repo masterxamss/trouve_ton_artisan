@@ -7,9 +7,9 @@ const SectionFindWorker = () => {
         </header>
 
         <div className="article-header block-1">
-          <span className="article-number">
+          <div className="article-number">
             <p>1</p>
-          </span>
+          </div>
           <h3 className="article-title">Choisir la catégorie</h3>
         </div>
 
@@ -30,9 +30,9 @@ const SectionFindWorker = () => {
         <div className="article-img block-3" aria-hidden="true"></div>
 
         <div className="article-header block-4">
-          <span className="article-number">
+          <div className="article-number">
             <p>2</p>
-          </span>
+          </div>
           <h3 className="article-title">Choisir un artisan</h3>
         </div>
 
@@ -53,9 +53,9 @@ const SectionFindWorker = () => {
         <div className="article-img block-6" aria-hidden="true"></div>
 
         <div className="article-header block-7">
-          <span className="article-number">
+          <div className="article-number">
             <p>3</p>
-          </span>
+          </div>
           <h3 className="article-title">Le contacter</h3>
         </div>
 
@@ -75,9 +75,9 @@ const SectionFindWorker = () => {
         <div className="article-img block-9" aria-hidden="true"></div>
 
         <div className="article-header block-10">
-          <span className="article-number">
+          <div className="article-number">
             <p>4</p>
-          </span>
+          </div>
           <h3 className="article-title">Réponse sous 48h</h3>
         </div>
 
